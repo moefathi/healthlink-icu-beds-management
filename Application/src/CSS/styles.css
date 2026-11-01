@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f9f7f7;
+    color: #112d4e;
+    font: 16px/1.5 Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #28588e;
+}
+
+a:hover {
+    color: #112d4e;
+}
+
+.site-header {
+    background: #112d4e;
+    color: #f9f7f7;
+}
+
+.header-content,
+.main-nav,
+.workspace {
+    width: min(1100px, 94%);
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 0;
+}
+
+.brand {
+    color: #f9f7f7;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.brand:hover {
+    color: white;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 12px;
+    gap: 4px;
+}
+
+.main-nav a {
+    color: #f9f7f7;
+    text-decoration: none;
+    padding: 9px 12px;
+    border-radius: 5px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background: #3f72af;
+}
+
+.mode-switch {
+    display: flex;
+    gap: 6px;
+}
+
+.mode-switch button {
+    background: transparent;
+    border-color: #dbe2ef;
+}
+
+.mode-switch .selected {
+    background: #dbe2ef;
+    color: #112d4e;
+}
+
+.hospital-bar {
+    padding: 20px 0;
+    border-bottom: 1px solid #c4cfdf;
+}
+
+.hospital-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hospital-selector label {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.hospital-selector select {
+    max-width: 550px;
+}
+
+main {
+    padding: 28px 0;
+    min-height: 65vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 0 0 24px;
+}
+
+h2 {
+    font-size: 21px;
+    margin: 0 0 18px;
+}
+
+p {
+    margin: 12px 0;
+}
+
+.panel {
+    padding: 24px;
+    margin: 24px 0;
+    background: white;
+    border: 1px solid #c4cfdf;
+    border-radius: 6px;
+    min-width: 0;
+}
+
+.narrow {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.metrics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.metrics article {
+    flex: 1 1 160px;
+    padding: 22px 14px;
+    text-align: center;
+    border: 1px solid #c4cfdf;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0 3px 6px #112d4e12;
+}
+
+.metrics span,
+.metrics strong {
+    display: block;
+}
+
+.metrics strong {
+    color: #28588e;
+    font-size: 32px;
+    margin-top: 8px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 18px;
+    min-width: 0;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #9baec6;
+    border-radius: 4px;
+    color: #112d4e;
+    background: white;
+    font: inherit;
+    min-width: 0;
+}
+
+input[type="hidden"] {
+    display: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button,
+.button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #112d4e;
+    border-radius: 5px;
+    background: #112d4e;
+    color: white;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background: #3f72af;
+    color: white;
+}
+
+.secondary {
+    background: #dbe2ef;
+    color: #112d4e;
+    border-color: #9baec6;
+}
+
+.danger {
+    background: #9b3038;
+    border-color: #9b3038;
+}
+
+:focus-visible {
+    outline: 3px solid #3f72af;
+    outline-offset: 3px;
+}
+
+.filters,
+.contact-row,
+.links,
+.tabs,
+.context {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.filters,
+.contact-row {
+    align-items: flex-end;
+}
+
+.filters label,
+.contact-row label {
+    flex: 1 1 220px;
+    margin: 0;
+}
+
+.tabs {
+    justify-content: center;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #c4cfdf;
+}
+
+.context {
+    background: #dbe2ef;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.form-grid,
+.two-column {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #c4cfdf;
+    vertical-align: top;
+}
+
+th {
+    background: #3f72af;
+    color: white;
+    white-space: nowrap;
+}
+
+tbody tr:nth-child(even) {
+    background: #f3f5f9;
+}
+
+td small {
+    display: block;
+}
+
+.notice {
+    padding: 14px;
+    border: 1px solid #9baec6;
+    border-radius: 4px;
+    background: #dbe2ef;
+    overflow-wrap: anywhere;
+}
+
+.notice.error {
+    color: #80252d;
+    border-color: #c8888f;
+    background: #fff0f1;
+}
+
+.notice.success {
+    color: #245b34;
+    border-color: #81ad8d;
+    background: #eef8f0;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: 12px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0;
+}
+
+.monitoring-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: end;
+    gap: 12px;
+    border-bottom: 1px solid #c4cfdf;
+    padding: 16px 0;
+}
+
+.route-path li {
+    padding: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    border-top: 1px solid #c4cfdf;
+}
+
+@media (max-width: 700px) {
+    .main-nav a {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .hospital-selector {
+        flex-wrap: wrap;
+    }
+    .hospital-selector label {
+        width: 100%;
+    }
+    .hospital-selector select {
+        flex: 1 1 220px;
+    }
+    .form-grid,
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .panel {
+        padding: 15px;
+    }
+    .monitoring-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .brand {
+        font-size: 25px;
+    }
+    .mode-switch button {
+        padding: 8px 10px;
+    }
+    dl {
+        grid-template-columns: 100px minmax(0, 1fr);
+    }
+}
